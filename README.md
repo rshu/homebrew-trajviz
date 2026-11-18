@@ -5,23 +5,17 @@ The Homebrew package includes the dashboards, command-line tools, and Python run
 
 ## Install
 
-Register the tap once so Homebrew can find `trajviz` by name.
+Register the tap once, trust the formula on Homebrew 6 or later, then install
+using the short package name:
 
 ```sh
 brew tap rshu/trajviz
-```
-
-On Homebrew 6 or later, trust the TrajViz formula once. [Homebrew Tap Trust](https://docs.brew.sh/Tap-Trust)
-
-```sh
 brew trust --formula rshu/trajviz/trajviz
-```
-
-Then install TrajViz.
-
-```sh
 brew install trajviz
 ```
+
+The tap and [formula trust](https://docs.brew.sh/Tap-Trust) are one-time setup.
+On older Homebrew versions, skip the `brew trust` command.
 
 Homebrew installs a prebuilt bottle when one matches your system. Otherwise it
 installs pinned Python wheels in an isolated environment. [Bottle releases](https://github.com/rshu/homebrew-trajviz/releases)
@@ -40,9 +34,6 @@ Open the local URL printed in your terminal. [TrajViz quickstart](https://rshu.g
 brew update
 brew upgrade trajviz
 ```
-
-If `brew update` migrates your tap to `rshu/trajviz`, repeat the trust command
-before upgrading.
 
 ## Maintaining the formula
 
