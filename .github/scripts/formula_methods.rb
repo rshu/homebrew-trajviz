@@ -15,24 +15,6 @@
                                                       ["-m", "agent_trajviz.converge"], {}
   end
 
-  def caveats
-    <<~EOS
-      Start the dashboard with:
-        agent-trajviz
-      Then open http://127.0.0.1:7860.
-
-      Start the comparison dashboard with:
-        agent-trajviz-converge-app --data-root /path/to/trajectories
-
-      Inspect saved AWE analyses without an API key:
-        agent-trajviz-awe inspect /path/to/saved-run.zip
-
-      This tap installs the full dashboard in an isolated Python environment.
-      Configure optional models in AI Trajectory Analysis > Settings.
-      Inspect a loaded session in AWE > Trajectory; reference attribution is optional.
-    EOS
-  end
-
   test do
     %w[agent-trajviz agent-trajviz-converge agent-trajviz-collect agent-trajviz-label agent-trajviz-awe
        agent-trajviz-converge-app].each do |command|
