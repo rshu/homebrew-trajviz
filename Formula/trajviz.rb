@@ -9,6 +9,16 @@ class Trajviz < Formula
   sha256 "570c10a8a0cab8dfa374c8d87c1905778614248566f8533f7182ea1e4d165700"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/rshu/homebrew-trajviz/releases/download/trajviz-0.7.1"
+    sha256 cellar: :any, arm64_tahoe:   "9709c3b342153735e891c34999e8cd63b21446f47f64892c27a482865910c03f"
+    sha256 cellar: :any, arm64_sequoia: "f171ea1e51549112e3e10a966ff02c49164a8475f7ea19216620bebb8a2888a2"
+    sha256 cellar: :any, tahoe:         "42d8a3946d56e8b909227b06f20470c16eef8f94e9b6d6b7fb044e0d417e1ff5"
+    sha256 cellar: :any, sequoia:       "43d4558e3d983727a9e3d9620742c7865819525f2fcc6f44abb5fea531ce51d1"
+    sha256 cellar: :any, arm64_linux:   "82a5dc8deb9f6bd74953c04edb2492ba9aa43a60fd9f549d803a956f54979fd9"
+    sha256 cellar: :any, x86_64_linux:  "d6040d7bae0538a77d8e13da6224fa08332a7e4bb0e12d8fd43468fcfd026676"
+  end
+
   depends_on "libyaml"
   depends_on "python@3.14"
 
